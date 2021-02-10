@@ -23,7 +23,9 @@ class Form extends Component {
             <h1 className="text-center">Form Validation</h1>
 
             <form className="form" onSubmit={this.handleSubmit}>
-                <p><input type="text"
+                <p>
+                    <label for="name">Name</label>
+                    <input type="text"
                         id="name"
                         value={this.state.email}
                         onChange={this.handleChange}
