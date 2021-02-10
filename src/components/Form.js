@@ -27,7 +27,7 @@ class Form extends Component {
                     <label for="name">Name</label>
                     <input type="text"
                         id="name"
-                        value={this.state.email}
+                        value={this.state.name}
                         onChange={this.handleChange}
                         name="name"
                         placeholder="Enter your name"
@@ -48,7 +48,7 @@ class Form extends Component {
                   /></p>
                 <p><input type="text"
                       id="url"
-                      value={this.state.phone}
+                      value={this.state.url}
                       onChange={this.handleChange}
                       name="url"
                       placeholder="Enter your blog URL"
