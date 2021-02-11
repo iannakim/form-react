@@ -12,7 +12,15 @@ form {
   margin-right: 30%;
 }
 
+.form-label {
+  font-size: 1.3rem;
+}
+
 .button {
  width: 60%;
  font-size: 1.3em;
+}
+
+.error {
+  white-space: pre-wrap;
 }
