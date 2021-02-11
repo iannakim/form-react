@@ -14,10 +14,15 @@ class Form extends Component {
         this.setState({
           [evt.target.name] : evt.target.value
         })
+        console.log(evt.target)
       }
     
 
     render() {
+        if (!this.state.email.includes("@")) {
+            console.log("ERROR")
+        }
+        // console.log(this.state.name)
         return (
             <div className="row">
             <h1 className="text-center">Form Validation</h1>
@@ -32,7 +37,9 @@ class Form extends Component {
                         name="name"
                         placeholder="Enter your name"
                     /></p>
-                  <p><input type="text"
+                  <p>
+                  <label for="email">Email</label>
+                  <input type="text"
                       id="email"
                       value={this.state.email}
                       onChange={this.handleChange}
