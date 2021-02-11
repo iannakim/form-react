@@ -10,9 +10,9 @@ class Form extends Component {
         phone: "",
         url: "",
         error: "",
-        errorMsg: false
     }
 
+    //controlled form inputs
     handleChange = (evt) => {
         this.setState({
             [evt.target.name] : evt.target.value
@@ -20,9 +20,10 @@ class Form extends Component {
         // console.log(evt.target)
     }
 
+    //submitting the form that leads to checking the following conditions
+    //if the condition(s) are met, error msg will append to errorText which will reset the error state
     handleSubmit = (evt) => {
         // console.log(this.state.error)
-        let errorMsg = errorText ? 'yellowColor' : 'redColor'
 
         let errorText = "";
 
@@ -88,7 +89,9 @@ class Form extends Component {
                 <div className="form-label" className="small-6 small-centered text-center columns">
                     <a type="submit" onClick={this.handleSubmit} href="#" className="button success expand round text-center">Verify</a>
                 </div>
+
                 <p className="error">{this.state.error}</p>
+                
             </form>
         </div>);
     }
