@@ -12,6 +12,12 @@ class Form extends Component {
         error: "",
     }
 
+
+    // handleError = (evt) => {
+    //     props.changeErrorMsg(evt.target.value)
+    // }
+
+
     //controlled form inputs
     handleChange = (evt) => {
         this.setState({
@@ -96,5 +102,10 @@ class Form extends Component {
         </div>);
     }
 }
+
+// Form.propTypes = {
+
+// }
+
 
 export default Form;

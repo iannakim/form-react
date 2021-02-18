@@ -4,10 +4,25 @@ import Message from './components/Message'
 
 class App extends Component {
 
+    state = {
+        error: ''
+    }
+
+    changeErrorMsg = (errorFromChild) => {
+        this.setState({
+          error: errorFromChild
+        })
+      }
+
+
     render() {
         return (<div>
-            <Form></Form>
-            <Message></Message>
+            <Form 
+                changeErrorMsg = {this.changeErrorMsg}
+            />
+            <Message
+                errorMsg = {this.state.error}
+            />
         </div>);
     }
 }
